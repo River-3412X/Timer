@@ -1,0 +1,149 @@
+:root {
+  --grayis-blue: hsl(237, 18%, 59%);
+  --soft-red: hsl(345, 95%, 68%);
+  --white: hsl(0, 0%, 100%);
+  --dark-desaturated-blue: hsl(236, 21%, 26%);
+  --very-dark-blue: hsl(235, 16%, 14%);
+  --very-dark: hsl(234, 17%, 12%);
+}
+
+html {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-size: 10px;
+}
+
+*, *:before, *:after {
+  -webkit-box-sizing: inherit;
+          box-sizing: inherit;
+}
+
+body {
+  background-color: #1e1e2a;
+  font-family: 'Red Hat Text', sans-serif;
+  width: 100wh;
+  max-width: 1440px;
+  height: 100vh;
+  background-image: url("../images/pattern-hills.svg"), url("../images/bg-stars.svg");
+  background-repeat: no-repeat , no-repeat;
+  background-position: bottom , bottom;
+}
+
+.flex {
+  height: 100%;
+  width: 460px;
+  margin: auto;
+}
+
+.timer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  height: 100vh;
+}
+
+.timer-header {
+  text-align: center;
+  color: var(--white);
+}
+
+.timer-body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  color: var(--soft-red);
+  font-size: 3rem;
+}
+
+.timer-body-top {
+  height: 48px;
+  width: 100px;
+  background-color: #2C2E43;
+  border-radius: 7px;
+}
+
+.timer-body-bottom {
+  height: 48px;
+  width: 100px;
+  background-color: var(--dark-desaturated-blue);
+  border-radius: 7px;
+  -webkit-box-shadow: 3px 3px 3px var(--very-dark);
+          box-shadow: 3px 3px 3px var(--very-dark);
+}
+
+.timer-body-content {
+  position: relative;
+  top: -110px;
+  text-align: center;
+}
+
+.timer-body-content hr {
+  position: relative;
+  top: -96px;
+  height: 0.1px;
+  background-color: #1e1e2a;
+  border: none;
+}
+
+.timer-body p {
+  font-size: 15px;
+}
+
+.timer-footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.timer-footer-img {
+  margin: 0 5px 0 5px;
+}
+
+@media (max-width: 475px) {
+  body {
+    background-size: 100% 20% , cover;
+  }
+  .flex {
+    width: 95%;
+  }
+  .timer-body {
+    -webkit-box-pack: baseline;
+        -ms-flex-pack: baseline;
+            justify-content: baseline;
+    width: 100%;
+  }
+  .timer-body .days {
+    width: 23%;
+  }
+  .timer-body .hours {
+    width: 23%;
+  }
+  .timer-body .minutes {
+    width: 23%;
+  }
+  .timer-body .seconds {
+    width: 23%;
+  }
+  .timer-body-top {
+    width: 100%;
+  }
+  .timer-body-bottom {
+    width: 100%;
+  }
+  .timer-body-content {
+    width: 100%;
+  }
+}
+/*# sourceMappingURL=styles.css.map */

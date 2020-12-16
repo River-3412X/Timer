@@ -1,0 +1,121 @@
+:root{
+    --grayis-blue: hsl(237, 18%, 59%);
+    --soft-red: hsl(345, 95%, 68%);
+    --white: hsl(0, 0%, 100%);
+    --dark-desaturated-blue: hsl(236, 21%, 26%);
+    --very-dark-blue: hsl(235, 16%, 14%);
+    --very-dark: hsl(234, 17%, 12%);
+}
+html{
+    box-sizing:border-box;
+    font-size: 10px;
+}
+*,*:before,*:after{
+    box-sizing: inherit;
+}
+body{
+    background-color: rgb(30,30,42);
+    font-family: 'Red Hat Text', sans-serif;
+    width: 100wh;
+    max-width: 1440px;
+    height: 100vh;
+    background-image: url('../images/pattern-hills.svg'), url('../images/bg-stars.svg');
+    background-repeat: no-repeat , no-repeat;
+    background-position: bottom , bottom;
+}
+.flex{
+    height: 100%;
+    width: 460px;
+    margin: auto;
+}
+.timer{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    height: 100vh;
+    &-header{
+        text-align: center;
+        color: var(--white);
+    }
+    &-body{
+        display: flex;
+        justify-content: space-between;
+        color: var(--soft-red);
+        font-size: 3rem;
+        
+        &-top{
+            height: 48px;
+            width: 100px;
+            background-color: #2C2E43;
+            border-radius: 7px;
+        }
+        &-bottom{
+            height: 48px;
+            width: 100px;
+            background-color: var(--dark-desaturated-blue);
+            border-radius: 7px;
+            box-shadow: 3px 3px 3px var(--very-dark);
+        }
+        &-content{
+            position: relative;
+            top:-110px;
+            text-align: center;
+            hr{
+                position: relative;
+                top:-96px;
+                height: 0.1px;
+                background-color:rgb(30,30,42);
+                border: none; 
+            }
+        }
+        p{
+            font-size: 15px;
+        }
+    }
+    &-footer{
+        display: flex;
+        justify-content: center;
+        &-img{
+            margin:0 5px 0 5px;
+        }
+    }
+}
+
+@media (max-width:475px){
+    body{
+        background-size: 100% 20% , cover;
+    }
+    .flex{
+        width: 95%;
+    }
+    .timer{
+        &-body{
+            justify-content: baseline;
+            width: 100%;
+            .days{
+                width:23%;
+            }
+            .hours{
+                width:23%;
+            }
+            .minutes{
+                width:23%;
+            }
+            .seconds{
+                width:23%;
+            }
+            &-top{
+                width: 100%;
+            }
+            &-bottom{
+                width: 100%;   
+            }
+            &-content{
+                width: 100%;
+            }
+        }
+    }    
+}
+
+
+
